@@ -4,4 +4,4 @@
 
 ## Moduuli 1
 
-Tämä moduuli nyt tulostaa "Hei, Inka Komulainen"
+Tehty tehtävät 1 ja 2.
