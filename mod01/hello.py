@@ -1,0 +1,1 @@
+print("Hei, Inka Komulainen!") #eka koodini pythonilla :)
