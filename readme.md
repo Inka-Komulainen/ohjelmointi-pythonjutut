@@ -2,6 +2,10 @@
 
 **Inka Komulainen**
 
-## Moduuli 1
+## Moduuli 1 ja 2
 
-Tehty tehtävät 1 ja 2.
+Tehty moduulin 1 ja 2 tehtävät.
+
+## Moduuli 3
+
+Aloitettu moduulin 3 tehtävät.
