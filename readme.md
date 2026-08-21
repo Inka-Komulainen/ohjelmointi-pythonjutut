@@ -8,4 +8,8 @@ Tehty moduulin 1 ja 2 tehtävät.
 
 ## Moduuli 3
 
-Aloitettu moduulin 3 tehtävät.
+Tehty moduulin 3 tehtävät.
+
+## Peliprojekti
+
+Peliprojekti kysyy ja tulostaa pelaajan nimen ja iän. 
