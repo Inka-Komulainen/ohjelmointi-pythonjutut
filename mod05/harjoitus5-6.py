@@ -11,7 +11,7 @@ while i <= iKaikkiN:
     x = random.uniform(-1,1)
     y = random.uniform(-1,1)
 
-    #print(x, y, sep = " ")  #käytettiin testauksessa, että saatiin pisteitä oikealta väliltä
+    #print(x, y, sep = " ")  #käytettiin testauksessa, jotta nähtiin saatujen pisteiden olevan oikealta väliltä
 
     if x ** 2 + y ** 2 < 1: #suurentaa n yhdellä, aina kun piste on ympyrän sisällä
         iYmpyraN +=1
