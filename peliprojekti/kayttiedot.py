@@ -6,15 +6,17 @@ sToiminto = ""
 
 print(f"Nimesi on {sPelaajaNimi} ja ikäsi on {iPelaajaIka}.\n")
 
-if (iPelaajaIka >= 12):
+# päävalikko alkaa tästä
+
+if (iPelaajaIka >= 12): # ei anna alle 12-vuotiasta päästä päävalikkoon
     while sToiminto != "lopeta":
         print(f"Tervetuloa päävalikkoon, {sPelaajaNimi}!")
-        print("\nAloita\nProfiili\nEtsi\nLöydöt (inventaario)\nLopeta\n")
+        print("\nEtene\nProfiili\nEtsi\nLöydöt (inventaario)\nLopeta\n")
 
         sToiminto = input("Mitä haluat tehdä: ").lower()
-        if sToiminto == "profiili":
+        if sToiminto == "profiili": # päävalikon toiminto "profiili" kertoo pelaajan tiedot
             print(f"Nimesi on {sPelaajaNimi} ja ikäsi on {iPelaajaIka}.\n")
-        elif sToiminto == "etsi":
+        elif sToiminto == "etsi": #päävalikon toiminto "etsi" avulla pelaaja löytää uusia asioita, tulee muuttumaan tulevaisuudessa 
             print("\nLähdet etsimään...")
             sSuunta = input("Mihin suuntaan lähdet etsimään? (vasemmalle, oikealle, suoraan): ").lower()
             if sSuunta == "vasemmalle":
@@ -23,8 +25,7 @@ if (iPelaajaIka >= 12):
                 print("Löysit kepin!")
             elif sSuunta == "suoraan":
                 print("Löysit valtavan kiven!")
-            print("Palaat takaisin alkuun.\n")
-       
+            print("Palaat takaisin alkuun.\n")       
 else:
     print("Et taida olla vielä tarpeeksi vanha.")
 

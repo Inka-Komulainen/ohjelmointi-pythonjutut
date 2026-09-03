@@ -18,6 +18,10 @@ Tehty moduulin 4 tehtävät.
 
 Moduulin 5 tehtävät tehty.
 
-## Peliprojekti
+## Moduuli 6 (mod05)
 
-Peliprojekti kysyy ja tulostaa pelaajan nimen ja iän. 
+Moduulin 6 tehtävät tehty.
+
+## Moduuli 7 (mod05)
+
+Moduulin 7 tehtävät tehty.
