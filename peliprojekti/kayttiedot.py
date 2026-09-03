@@ -2,11 +2,11 @@
 
 sPelaajaNimi = input("Mikä on nimesi: ")
 iPelaajaIka = int(input("Kuinka vanha olet: "))
-sToiminto = ""
 
 print(f"Nimesi on {sPelaajaNimi} ja ikäsi on {iPelaajaIka}.\n")
 
 # päävalikko alkaa tästä
+sToiminto = ""
 
 if (iPelaajaIka >= 12): # ei anna alle 12-vuotiasta päästä päävalikkoon
     while sToiminto != "lopeta":
