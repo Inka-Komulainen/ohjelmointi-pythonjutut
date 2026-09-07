@@ -9,12 +9,11 @@ while komento != "lopeta":
     if komento == "lisää":
         nimi = input("Anna lentoaseman nimi: ")
         koodi = input("Anna aseman ICAO-koodi: ")
-        asematiedot[nimi] = koodi
+        asematiedot[koodi] = nimi
     elif komento == "hae":
-        hae_koodi = input("Anna aseman ICAO-koodi: ")
-        for nimi, koodi in asematiedot.items():
-            if koodi == hae_koodi:
-                print(nimi)
+        koodi = input("Anna aseman ICAO-koodi: ")
+        print(asematiedot[koodi])
+        
         
     komento = input("Mitä haluat tehdä? (hae, lisää, lopeta): ")
     
