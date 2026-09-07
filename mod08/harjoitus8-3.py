@@ -12,7 +12,7 @@ while komento != "lopeta":
         asematiedot[koodi] = nimi
     elif komento == "hae":
         koodi = input("Anna aseman ICAO-koodi: ")
-        print(asematiedot[koodi])
+        print(f"Aseman nimi on {asematiedot[koodi]}.")
         
         
     komento = input("Mitä haluat tehdä? (hae, lisää, lopeta): ")
