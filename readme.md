@@ -18,10 +18,18 @@ Tehty moduulin 4 tehtävät.
 
 Moduulin 5 tehtävät tehty.
 
-## Moduuli 6 (mod05)
+## Moduuli 6 (mod06)
 
 Moduulin 6 tehtävät tehty.
 
-## Moduuli 7 (mod05)
+## Moduuli 7 (mod07)
 
 Moduulin 7 tehtävät tehty.
+
+## Moduuli 8 (mod08)
+
+Moduulin 8 tehtävät tehty.
+
+## Peliprojekti
+
+Peliprojekti teht 2 saatu valmiiksi.

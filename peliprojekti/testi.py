@@ -2,50 +2,49 @@
 #
 
 # alkuperäisen ascii taide ritarin on tehnyt Joan G. Stark
-rivi0 =r"       !"
-rivi1 =r"      .-."
-rivi2 =r"    __|=|__"
-rivi3 =r"   (_/'-'\_)"
-rivi4 =r"   //\___/\\ "
-rivi5 =r"   <>/   \<>"
-rivi6 =r"    \|_._|/"
-rivi7 =r"      |||"
-rivi8 =r"     /_|_\ "
+#r"       !"
+#r"      .-."
+#r"    __|=|__"
+#r"   (_/'-'\_)"
+#r"   //\___/\\ "
+#r"   <>/   \<>"
+#r"    \|_._|/"
+#r"      |||"
+#r"     /_|_\ "
 
-print(rivi0, rivi1, rivi2, rivi3, rivi4, rivi5, rivi6, rivi7, rivi8, sep="\n")
 
-rivi0 =r""
-rivi1 =r"       ⎱          ^"
-rivi2 =r"       .-.       //"
-rivi3 =r"    __| =|_     //"
-rivi4 =r"   (_/ '-'\_)  // "
-rivi5 =r"   //\___/ \\--W--"
-rivi6 =r"  () /_.— \  ()"
-rivi7 =r"    //   || /"
-rivi8 =r"   |_\   |_\ "
+#r""
+#r"       ⎱          ^"
+#r"       .-.       //"
+#r"    __| =|_     //"
+#r"   (_/ '-'\_)  // "
+#r"   //\___/ \\--W--"
+#r"  () /_.— \  ()"
+#r"    //   || /"
+#r"   |_\   |_\ "
 
-print(rivi0, rivi1, rivi2, rivi3, rivi4, rivi5, rivi6, rivi7, rivi8, sep="\n")
+taistelu_valmis = [r"", r"       ⎱          ^", r"       .-.       //", r"    __| =|_     //",r"   (_/ '-'\_)  // ", r"   //\___/ \\--W--", r"  () /_.— \  ()", r"    //   || /",r"   |_\   |_\ " ]
 
-rivi0 =r""
-rivi1 =r"       ⎱  "
-rivi2 =r"       .-.  "
-rivi3 =r"    __| =|_ "
-rivi4 =r"   (_/ '|'\_) "
-rivi5 =r"   /___(()__\ "
-rivi6 =r"     /_.M._\ "
-rivi7 =r"    // || ||"
-rivi8 =r"   /_| || |_\ " 
+for i in taistelu_valmis:
+    print(i, sep="\n")
 
-print(rivi0, rivi1, rivi2, rivi3, rivi4, rivi5, rivi6, rivi7, rivi8, sep="\n")
 
-rivi0 =r""
-rivi1 =r"       ⎱     ☆"
-rivi2 =r"       .-.   ()"
-rivi3 =r"    __| =|_ //"
-rivi4 =r"   (_/ '-'\_)"
-rivi5 =r"   //\___/"
-rivi6 =r"  () /_.— \ "
-rivi7 =r"    //   ||"
-rivi8 =r"   |_\   |_\ "
+#r""
+#r"       ⎱  "
+#r"       .-.  "
+#r"    __| =|_ "
+#r"   (_/ '|'\_) "
+#r"   /___(()__\ "
+#r"     /_.M._\ "
+#r"    // || ||"
+#r"   /_| || |_\ " 
 
-print(rivi0, rivi1, rivi2, rivi3, rivi4, rivi5, rivi6, rivi7, rivi8, sep="\n")
+#r""
+#r"       ⎱     ☆"
+#r"       .-.   ()"
+#r"    __| =|_ //"
+#r"   (_/ '-'\_)"
+#r"   //\___/"
+#r"  () /_.— \ "
+#r"    //   ||"
+#r"   |_\   |_\ "
