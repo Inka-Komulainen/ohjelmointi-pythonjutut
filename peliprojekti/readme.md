@@ -18,6 +18,6 @@ Päävalikko on seuraavassa formaatissa:
 
 ## projektitehtävä 3 
 
-Lähes kaikilla päävalikon toiminnoilla on oma funktio. Profiili ei enää pelkästään esitä pelaajan nimeä ja ikää, mutta antaa myös pelaajan muuttamaan niitä. Inventaario tulostetaan löydöt toiminnolla, mikä myös kertoo, montako esinettä inventaariossa on. Päävalikon toiminto "Etene" on vielä kesken.
+Lähes kaikilla päävalikon toiminnoilla on oma funktio. "Profiili" toiminto ei enää pelkästään esitä pelaajan nimeä ja ikää, mutta antaa myös pelaajan muuttamaan niitä. Inventaario tulostetaan "löydöt" toiminnolla, mikä myös kertoo, montako esinettä inventaariossa on. Päävalikon toiminto "etene" on vielä kesken.
 
-(Haluan "etene" toiminolla pelaajan etenevän pelin seuraavalle alueelle, jonka on tarkoitus tulevaisuudessa sekoittaa se, mitä voit löytää etsi toiminnolla.)
+(Haluan "etene" toiminolla pelaajan etenevän pelin seuraavalle alueelle, jonka on tarkoitus tulevaisuudessa sekoittaa se, mitä voidaan löytää "etsi" toiminnolla.)

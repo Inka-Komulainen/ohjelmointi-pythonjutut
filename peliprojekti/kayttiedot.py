@@ -15,7 +15,7 @@ def kutsu_profiili(nimi, ika): # kertoo pelaajan nimen ja iän, antaa muuttaa ne
         return nimi, ika
 
 # tällä toiminolla pelaaja etenee pelin seuraavalle alueelle, jonka on tarkoitus tulevaisuudessa sekoittaa
-# mitä voit löytää etsi toiminnolla
+# mitä voidaan löytää etsi toiminnolla
 def kutsu_etene(): 
     print("Jatkaessasi eteenpäin näet valtavan röllin istuvan sillalla. Kun pääset hänet luokseen, hän sanoo:")
     print("'Et pääse sillan yli, josset anna minulle kahta sientä ja keppiä. Haluan sieniä vartaalla lounaaksi!'")
