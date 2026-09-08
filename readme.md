@@ -32,4 +32,4 @@ Moduulin 8 tehtävät tehty.
 
 ## Peliprojekti
 
-Peliprojekti teht 2 saatu valmiiksi.
+Peliprojekti teht 3 saatu valmiiksi.
