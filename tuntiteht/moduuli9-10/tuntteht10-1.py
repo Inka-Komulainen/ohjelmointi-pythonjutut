@@ -14,7 +14,7 @@ class Lentokone:
     def tulosta_tiedot(self):
         print(f"Koneen nimi on {self.koneen_nimi}.")
         print(f"Koneen tankin maksimi on {self.koneen_tankin_maksimi} l.")
-        print(f"Koneen tankissa on nyt {self.koneen_tankin_maksimi} l.")
+        print(f"Koneen tankissa on nyt {self.koneen_tankki_nyt} l.")
 
 class Lentokentta:
     def __init__(self, nimi):
