@@ -30,6 +30,14 @@ Moduulin 7 tehtävät tehty.
 
 Moduulin 8 tehtävät tehty.
 
+## Moduuli 9 (mod09)
+
+Moduulin 9 tehtävät tehty.
+
+## Moduuli 10 (mod10)
+
+Tiedostot moduuli 10 varten luotu.
+
 ## Peliprojekti
 
 Peliprojekti teht 3 saatu valmiiksi.

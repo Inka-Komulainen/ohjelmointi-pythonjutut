@@ -48,3 +48,8 @@ for i in taistelu_valmis:
 #r"  () /_.— \ "
 #r"    //   ||"
 #r"   |_\   |_\ "
+
+loyto_visuaali = [r"",r"       ⎱     ☆",r"       .-.   ()",r"    __| =|_ //",r"   (_/ '-'\_)",r"   //\___/",r"  () /_.— \ ",r"    //   ||",r"   |_\   |_\ "]
+
+for i in loyto_visuaali:
+    print(i, sep="\n")

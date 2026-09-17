@@ -1,0 +1,12 @@
+
+
+class Koira:
+    def __init__(self, nimi, syntymavuosi, haukahdus = "Vuh"):
+        self.nimi = nimi
+        self.syntymavuosi = syntymavuosi
+        self.haukahdus = haukahdus
+
+koira1 = Koira("Alex", 2023)
+koira2 = Koira("Max", 2019, "Hau")
+
+print()

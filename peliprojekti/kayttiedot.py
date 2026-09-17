@@ -25,8 +25,18 @@ def kutsu_etene():
             x = input("Onko sinulla 2 sientä ja keppi? (k/e): ")
 
     if x == "k":
-        print("Anteeksi, en ole ehtinyt ohjelmoida näin pitkälle!")
-        return 
+        if inventaario.count("Sieni") >= 2 and inventaario.count("Keppi") >= 1:
+            print("Annat röllille sienet ja kepin.")
+            inventaario.remove("Sieni")
+            inventaario.remove("Sieni")
+            inventaario.remove("Keppi")
+        else:
+            print("Ei ollut tarpeeksi tarvikkeita. Pakenet ennen kuin rölli ottaa sinut suihinsa.")
+            return
+        
+        print("Anteeksi, en ole ehtinyt ohjelmoida pidemmälle.")
+        return
+        
     elif x == "e":
         print("Et pääse sillan yli. Palataan aiemmalle alueelle etsimään.")
         return 
@@ -35,18 +45,21 @@ def kutsu_etene():
 
 
 def kutsu_etsi(inv): # etsi toiminnon funktio, tämän kautta pelaaja löytää uusia esineitä inventaarioon
-    print("\nLähdet etsimään...")
+    print("Lähdet etsimään...\n")
     suunta1 = input("Mihin suuntaan lähdet etsimään? (vasemmalle, oikealle, suoraan): ").lower()
     if suunta1 == "vasemmalle":
+        print("Saavut aukiolle, jonka peittää pienet sienet kauttaaltaan. Poimit yhden.")
         print("Löysit sienen!")
         inv.append("Sieni")
     elif suunta1 == "oikealle":
+        print("Huomaat valtavan kuolleen pensaan. Katkaiset yhden oksan.")
         print("Löysit kepin!")
         inv.append("Keppi")
     elif suunta1 == "suoraan":
         print("Löysit valtavan kiven!")
         print("Kivi on liian suuri ottaa mukaan.")
-    print("Palaat takaisin alkuun.\n") 
+    print("\nPalaat takaisin alkuun.\n") 
+    input("") # tämä input on tässä, jotta pelaaja näkee lukemaan uuden tekstin
     return
 
 def kutsu_loydot(inv): # tulostaa inventaarion, kertoo myös asoiden määrän inventaariossa
@@ -63,6 +76,8 @@ pelaajan_nimi = input("Mikä on nimesi: ")
 pelaajan_ika = int(input("Kuinka vanha olet: "))
 
 print(f"Nimesi on {pelaajan_nimi} ja ikäsi on {pelaajan_ika}.\n")
+
+
 
 #luodaan inventaario:
 inventaario = list()
