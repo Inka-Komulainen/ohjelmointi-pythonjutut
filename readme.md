@@ -36,7 +36,7 @@ Moduulin 9 tehtävät tehty.
 
 ## Moduuli 10 (mod10)
 
-Tiedostot moduuli 10 varten luotu.
+Moodulin 10 tehtävät tehty.
 
 ## Peliprojekti
 

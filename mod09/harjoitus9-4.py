@@ -1,4 +1,5 @@
-# harjoitus 4 -- 
+# harjoitus 4 -- lisää tehtävän 3 ohjelmaan mekanismin, joka arpoo 10 autoa kilpailuun ja järjestää kilpailun,
+# jossa ensimmäinen 10 000 km ylittänyt auto voittaa.
 
 import random
 
