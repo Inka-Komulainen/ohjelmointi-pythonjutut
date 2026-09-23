@@ -39,8 +39,3 @@ lentokentta1.lisaa_lentokone(lentokone1)
 lentokentta1.lisaa_lentokone(lentokone2)
 
 lentokentta1.tulosta_koneet()
-
-
-
-    
-

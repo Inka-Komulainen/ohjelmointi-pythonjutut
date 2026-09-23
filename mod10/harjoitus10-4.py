@@ -14,7 +14,7 @@ class Auto:
         self.nykyinen_nopeus += muutos
         if self.nykyinen_nopeus > self.huippunopeus:
             self.nykyinen_nopeus = self.huippunopeus
-        elif self.nykyinen_nopeus < 0:
+        elif self.nykyinen_nopeus < 0: 
             self.nykyinen_nopeus = 0
 
     def kulje(self, tunnit):
@@ -26,7 +26,7 @@ class Kilpailu:
         self.pituus = pituus
         self.kilpailevat_autot = {}
         
-        for i in range(10): # tämä loop luo auto-oliot, luo niiden rekisterinumeron ja arpoo huippunopeuden
+        for i in range(10): # tämä loop luo auto-oliot kilpailuun, luo niiden rekisterinumeron ja arpoo huippunopeuden
             rekisteri_n = "ABC-" + str(i+1)
             avain = "auto" + str(i+1)
             self.kilpailevat_autot[avain] = Auto(rekisteri_n, random.randint(100,200))
