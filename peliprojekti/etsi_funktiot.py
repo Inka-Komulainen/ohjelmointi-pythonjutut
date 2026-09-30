@@ -1,21 +1,25 @@
 # eri etsi funktioita
 import random
+import visuaalit
 
 def etsi_alue1(inv):
-    print("Lähdet etsimään...\n")
+    visuaalit.etsi_visuaali()
+    print("Lähdet etsimään...")
     suunta1 = input("Mihin suuntaan lähdet etsimään? (vasemmalle, oikealle, suoraan): ").lower()
     if suunta1 == "vasemmalle":
         print("Saavut aukiolle, jonka peittää pienet sienet kauttaaltaan. Poimit yhden.")
+        visuaalit.loyto_visuaali()
         print("Löysit sienen!")
         inv.append("Sieni")
     elif suunta1 == "oikealle":
         print("Huomaat valtavan kuolleen pensaan. Katkaiset yhden oksan.")
+        visuaalit.loyto_visuaali()
         print("Löysit kepin!")
         inv.append("Keppi")
     elif suunta1 == "suoraan":
         print("Löysit valtavan kiven!")
         print("Kivi on liian suuri ottaa mukaan.")
-    print("\nPalaat takaisin alkuun.\n") 
+    print("Palaat takaisin alkuun.") 
     input("") 
 
 def etsi_alue2(inv):
@@ -24,6 +28,7 @@ def etsi_alue2(inv):
     arpa = random.randint(1,3)
     if arpa == 1:
         print("Saavut lähteelle, jonka vesi on niin kirkasta, että näet pohjaan asti. Täytät vesipullon.")
+        visuaalit.loyto_visuaali()
         print("Löysit vesipullon!")
         inv.append("Vesi")
     elif arpa == 2:
@@ -49,6 +54,7 @@ def etsi_alue3(inv):
     elif x == "tutki":
         arpa = random.randint(1,tod)
         if arpa == 1:
+            visuaalit.loyto_visuaali()
             print("Löysit kukan!")
             inv.append("Kukka")
         else:
@@ -69,12 +75,14 @@ def etsi_alue4(inv):
     if x == "maatila":
         print("Tutkit maatilaa ja sen rakennuksia.")
         print("Löydät maatilan takaa pensaan, josta löytyy punaisen kuultavia marjoja.")
+        visuaalit.loyto_visuaali()
         print("Löysit marjat.")
         inv.append("Marjat")
     elif x == "mylly":
         print("Myllyssä on vesivoimalla toimiva mehustin.")
         if inv.count("Marjat") >= 1:
             print("Asetat marjat mehustimeen ja käännät sen vipua.")
+            visuaalit.loyto_visuaali()
             print("Löysit mehua!")
             inv.remove("Marjat")
             inv.append("Mehu")

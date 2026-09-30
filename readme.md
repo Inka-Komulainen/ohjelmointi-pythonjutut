@@ -38,6 +38,10 @@ Moduulin 9 tehtävät tehty.
 
 Moodulin 10 tehtävät tehty.
 
+## Moduuli 11 (mod11)
+
+Moduulin 11 tehtävät tehty.
+
 ## Peliprojekti
 
 Peliprojekti teht 3 saatu valmiiksi.

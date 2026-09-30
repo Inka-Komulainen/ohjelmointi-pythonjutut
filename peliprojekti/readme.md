@@ -2,6 +2,8 @@
 
 Inka Komulainen
 
+
+
 ## projektitehtävä 1
 
 Peli kysyy pelaaja nimen ja iän, ja tulostaa ne.

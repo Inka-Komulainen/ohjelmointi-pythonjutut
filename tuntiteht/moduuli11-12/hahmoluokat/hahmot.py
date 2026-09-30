@@ -31,37 +31,4 @@ class Hahmo:
             print(f"{self.nimi} voitti taistelun!")
             self.tulosta_tiedot()
 
-class Pelaajahahmo(Hahmo):
-    def __init__(self, nimi, tavaralista = ["miekka","kilpi"]):
-        self.tavaralista = tavaralista
-        super().__init__(nimi)
 
-    def tulosta_tiedot(self):
-        super().tulosta_tiedot()
-        print(f"Tavaraluettelo: {self.tavaralista.copy()}")
-    
-
-class Hirvio(Hahmo):
-    def __init__(self, nimi, repliikki):
-        self.repliikki = repliikki
-        super().__init__(nimi)
-
-    def tulosta_tiedot(self):
-        super().tulosta_tiedot()
-        print(f"Repliikki: {self.repliikki}")
-
-merihirvio = Hirvio("Merihirviö", "Lits läts, aion syödä sinut!")
-pelaajahahmo = Pelaajahahmo(input("Anna hahmon nimi: "))
-
-print("Peli alkaa.")
-pelaajahahmo.tulosta_tiedot()
-input()
-
-print(f"{pelaajahahmo.nimi} kohtaa ensimmäiseksi kauhean hirviön. Hirviö huutaa:")
-print(merihirvio.repliikki)
-merihirvio.tulosta_tiedot()
-
-input()
-pelaajahahmo.taistelu(merihirvio)
-input()
-print(f"Peli ohi.")

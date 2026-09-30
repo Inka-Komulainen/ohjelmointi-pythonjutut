@@ -1,8 +1,7 @@
 # ensimmäinen peliprojektini
 
-# kestävän kehityksen teema: pelaaja etenee pelissä uusille alueille, joiden resurssit ovat
-# saatu enemmän tai vähemmän kestävän kehityksen perusteella
-# resurssien keräämiseen on eri vaikeustasoja jne. tämän perusteella???
+# kestävän kehityksen teema: pelaaja etenee pelissä uusille alueille, joissa hänen täytyy
+# auttaa ihmisiä. Jokaisen alueen ongelma edustaa jotakin kestävän kehityksen teemaa.
 
 import etsi_funktiot
 
@@ -28,6 +27,8 @@ class Pelaaja:
         inv_maara = 0
         tehdyt = []
 
+        print("Löytösi:\n")
+
         for i in self.inventaario: 
             #loop tulostaa jokaisen uniikin esineen kerran, ja kertoo montako niitä on
             # esim. esine1 - 3 kpl, esine2 - 5 kpl
@@ -39,8 +40,8 @@ class Pelaaja:
                 print(f"{i} - {maara} kpl")
                 tehdyt.append(i)
 
-        print(f"Sinulla on {inv_maara} löytöä.") # kertoo montako esinettä inventaariossa on yhteensä
-        print("")
+        input(f"Sinulla on {inv_maara} löytöä.") # kertoo montako esinettä inventaariossa on yhteensä
+
 
     def kutsu_etsi(self):
         if self.sijainti == "metsä":
@@ -49,7 +50,7 @@ class Pelaaja:
             etsi_funktiot.etsi_alue2(self.inventaario)
         elif self.sijainti == "niitty":
             etsi_funktiot.etsi_alue3(self.inventaario)
-        elif self.sijainti == "pelto":
+        elif self.sijainti == "pellot":
             etsi_funktiot.etsi_alue4(self.inventaario)
 
 
@@ -64,32 +65,31 @@ class Alue:
 
 
 #etene funktio - pääsee seuraavalle alueelle tämän kautta
-def kutsu_etene(inv): 
-    print("Jatkaessasi eteenpäin näet valtavan röllin istuvan sillalla. Kun pääset hänet luokseen, hän sanoo:")
-    print("'Et pääse sillan yli, josset anna minulle kahta sientä ja keppiä. Haluan sieniä vartaalla lounaaksi!'")
+    def kutsu_etene(self,inv): 
+        print(self.kuvaus)
 
-    poistot = 0
-    for i in alue1.lahtoehto: #tarkistaa, onko pyydetyt esineet listassa ja poistaa ne
-        for j in inv:
-            if i == j:
-                inv.remove(i)
-                poistot += 1
-                break
+        poistot = 0
+        for i in self.lahtoehto: #tarkistaa, onko pyydetyt esineet listassa ja poistaa ne
+            for j in inv:
+                if i == j:
+                    inv.remove(i)
+                    poistot += 1
+                    break
 
-    if len(alue1.lahtoehto) == poistot: # tarkistaa, että
-        Alue.tehdyt_alueet += 1
-        Alue.alueet.remove(pelaaja1.sijainti)
-        print("Annat pyydetyt esineet, ja voit jatkaa seuraavalle alueelle.")
-    else:
-        print("Ei ollut tarpeeksi tarvikkeita. Pakenet ennen kuin rölli ottaa sinut suihinsa.")
+        if len(self.lahtoehto) == poistot: # tarkistaa, että
+            self.tehdyt_alueet += 1
+            self.alueet.remove(pelaaja1.sijainti)
+            print("Annat pyydetyt esineet, ja voit jatkaa seuraavalle alueelle.")
+        else:
+            print("Ei ollut tarpeeksi tarvikkeita. Pakenet ennen kuin rölli ottaa sinut suihinsa.")
         
 
 # pääohjelma alkaa tästä
 
 alue1 = Alue("metsä","kaunis metsä",["Sieni","Sieni","Keppi"])
-alue2 = Alue("vuoret","kaunis metsä",["sieni","sieni","keppi"])
-alue3 = Alue("niitty","kaunis metsä",["sieni","sieni","keppi"])
-alue4 = Alue("pelto","kaunis metsä",["sieni","sieni","keppi"])
+alue2 = Alue("vuoret","kauniit vuoret",["Vesi"])
+alue3 = Alue("niitty","kaunis niitty",["Kukka"])
+alue4 = Alue("pellot","kaunis pelto",["Mehu"])
 
 pelaaja1 = Pelaaja(input("Mikä on nimesi: "), int(input("Kuinka vanha olet: ")))
 
@@ -100,7 +100,6 @@ if (pelaaja1.ika >= 12): # ei anna alle 12-vuotiasta päästä päävalikkoon
 else:
     print("Et taida olla vielä tarpeeksi vanha.")
 
-#aluevalikko tähän?
 
 toiminto = ""
 
@@ -112,7 +111,7 @@ while Alue.tehdyt_alueet < 4 and toiminto != "lopeta":
     pelaaja1.sijainti = input("Valitse: ")
 
     while toiminto != "lopeta":
-        print(f"Tervetuloa päävalikkoon, {pelaaja1.nimi}!")
+        print(f"\nTervetuloa päävalikkoon, {pelaaja1.nimi}!")
         print("\nEtene\nProfiili\nEtsi\nLöydöt (inventaario)\nLopeta\n")
 
         toiminto = input("Mitä haluat tehdä: ").lower()
@@ -122,7 +121,14 @@ while Alue.tehdyt_alueet < 4 and toiminto != "lopeta":
                 print("Hei! Olet liian nuori! Älä yritä huijata!")
                 break
         elif toiminto == "etene":
-            kutsu_etene(pelaaja1.inventaario)
+            if pelaaja1.sijainti == "metsä":
+                alue1.kutsu_etene(pelaaja1.inventaario)
+            elif pelaaja1.sijainti == "vuoret":
+                alue2.kutsu_etene(pelaaja1.inventaario)
+            elif pelaaja1.sijainti == "niitty":
+                alue1.kutsu_etene(pelaaja1.inventaario)
+            elif pelaaja1.sijainti == "pellot":
+                alue1.kutsu_etene(pelaaja1.inventaario)
             break
         elif toiminto == "etsi": # päävalikon toiminto "etsi" avulla pelaaja löytää uusia asioita, tulee muuttumaan tulevaisuudessa 
             pelaaja1.kutsu_etsi()
