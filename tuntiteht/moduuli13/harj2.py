@@ -1,5 +1,5 @@
 
-with open("ostoslista.txt",) as tiedosto:
+with open("ostoslista.txt", "r") as tiedosto:
     data = tiedosto.read()
     print(data)
 

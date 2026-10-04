@@ -13,7 +13,7 @@
 
 def profiili_visuaali():
 
-   p_visuaali =("""
+   p_visuaali =(r"""
        ⎱
       .-.
     __|=|__
@@ -29,7 +29,7 @@ def profiili_visuaali():
 
 def etsi_visuaali():
 
-    e_visuaali =("""
+    e_visuaali =(r"""
        ⎱          ^
        .-.       //
     __| =|_     //
@@ -43,13 +43,13 @@ def etsi_visuaali():
 
 
 def hukassa_visuaali():
-   h_visuaali = ("""
+   h_visuaali = (r"""
      __  ⎰  ? ?
     //  .-.  ?
     \\__|= |__
      \_ /'-'\_) |
        |___ / \(()
-       /_._\  --M--
+       /_._|  --M--
       //  ||   ||
      /_|  |_\  ||
 """)
@@ -57,7 +57,7 @@ def hukassa_visuaali():
 
 def loyto_visuaali():
 
-    e_visuaali =("""
+    e_visuaali =(r"""
        ⎱     ☆
        .-.   ()
     __| =|_ //
@@ -68,6 +68,16 @@ def loyto_visuaali():
    |_\   |_\ 
 """)
     print(e_visuaali)
+
+
+#         -- \___/ --   ⎱         .--.--.      .--.--.
+#   ccccc   /  |  \     .-.              .--.--.     cccc
+#cccc  ccccccc       __|  |__      cccccc    cccccccc  ccccccc
+#  ccccc    ccccc   (_ /' '\_) | ccc    ccccccc  ccccccc
+#                   //|___ / \(()                         
+# ///__            () /_._|  --M--           ___////__
+#      \///_.--------//--||---||-----._///__/           
+#           \  ///  /_|  |_\  || /// /                   
 
 #r""
 #r"       ⎱  "
