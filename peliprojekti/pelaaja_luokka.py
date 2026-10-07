@@ -32,7 +32,7 @@ class Pelaaja:
             #loop tulostaa jokaisen uniikin esineen kerran, ja kertoo montako niitä on
             # esim. esine1 - 3 kpl, esine2 - 5 kpl
             if i in tehdyt:
-                break
+                pass
             else:
                 maara = self.inventaario.count(i)
                 inv_maara += maara
@@ -40,6 +40,7 @@ class Pelaaja:
                 tehdyt.append(i)
 
         input(f"Sinulla on {inv_maara} löytöä.") # kertoo montako esinettä inventaariossa on yhteensä
+        tehdyt.clear()
 
 
     def kutsu_etsi(self):

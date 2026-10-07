@@ -2,7 +2,7 @@
 import random
 import visuaalit
 
-def etsi_alue1(inv):
+def etsi_alue1(inv): # alue1 eli metsä: eri suunnista löytyy eri esineitä
     visuaalit.etsi_visuaali()
     print("Lähdet etsimään...")
     suunta1 = input("Mihin suuntaan lähdet etsimään? (vasemmalle, oikealle, suoraan): ").lower()
@@ -20,14 +20,18 @@ def etsi_alue1(inv):
         print("Löysit valtavan kiven!")
         print("Kivi on liian suuri ottaa mukaan.")
         visuaalit.hukassa_visuaali()
+        input()
     print("Palaat takaisin alkuun.") 
 
 
-def etsi_alue2(inv):
-    print("Saavut vuoristoiselle alueelle, joka on tunnettu lähteistään.")
+def etsi_alue2(inv): # alue2 eli vuoret eri suunnissa on eri mahdollisuudet löytää esineitä, ja löytyy eri määrä esineitä
+    print("Kylästä lähtee polkuja 2 suuntaan: ylä- ja alarinteeseen.")
+    print("Alarinteestä polut ovat selkeämpiä, mutta vesitynnyreiden kantaminen on raskaampaa.")
+    print("Ylärinteessä on polkuja on vaikeampi navigoida, mutta täydet tynnyrit on helpompi tuoda kylään.\n")
     x = input("Lähdetkö etsimään kylästä ylä- vai alarinteeseen? (ylös, alas): ").lower()
     while x != "ylös" and x != "alas":
         input("Lähdetkö etsimään kylästä ylä- vai alarinteeseen? (ylös, alas): ").lower()
+        print()
 
     if x == "ylös":
         arpa = random.randint(1,3)
@@ -43,7 +47,7 @@ def etsi_alue2(inv):
             input("Pitää jatkaa etsimistä...")
         elif arpa == 3:
             print("Saavut lähteelle, mutta vesi haisee mädältä kananmunalta.")
-            print("Pitää jatkaa etsimistä...")
+            input("Pitää jatkaa etsimistä...")
 
     elif x == "alas":
         arpa = random.randint(1,2)
@@ -53,18 +57,18 @@ def etsi_alue2(inv):
             input("Saat täytettyä kaksi vesitynnyriä!")
             print("Kun kiipeät rinnettä ylös takaisin kylään, huomaat ettet jaksa kantamaan kahta tynnyriä.")
             print("Joudut jättämään toisen tynnyreistä rinteeseen.")
-            print("Menetit vesitynnyrin!")
+            visuaalit.hukassa_visuaali()
+            input("Menetit vesitynnyrin!")
             inv.append("Vesi")
         elif arpa == 2:
             print("Kuulet veden virtausta läheltä. Löydät lammikon, johon virtaa kirkaan vihreetä liejua.")
-            print("Pitää jatkaa etsimistä...")
+            input("Pitää jatkaa etsimistä...")
 
 
-def etsi_alue3(inv, tod):
+def etsi_alue3(inv, tod): # alue3 eli niitty. Voit kitkemällä niittyä parantaa mahdollisuuksia löytää esineen.
     print("Saavut avoimelle niitylle täynnä kukkia. Näet ihmisiä tekevän jotain kukkien seassa.")
-    # voit etsiä tai kitkeä, jokainen kitkeminen nostaa etsimisen onnistumista
-
     x = input("Mitä aiot tehdä? (kitke, tutki): ").lower()
+
     while x != "kitke" and x != "tutki":
         x = input("Mitä aiot tehdä? (kitke, tutki): ").lower()
 
@@ -72,7 +76,7 @@ def etsi_alue3(inv, tod):
         print("Autat tutkijoita vieraslajin kitkemisessä.")
         if tod > 1:
             tod -= 1
-            print(f"Nyt vieraslaji peittää {1 - 1/tod} % niitystä.")
+            print(f"Nyt vieraslaji peittää {(1 - 1/tod) *100} % niitystä.")
     elif x == "tutki":
         print("Etsit niityltä kukkaa.")
         x = random.randint(1,tod)
@@ -83,12 +87,13 @@ def etsi_alue3(inv, tod):
         else:
             print("Et löytänyt kukkaa. Koska et auttanut tutkijoita, vieraslaji leviää niityllä.")
             input("Kitkemällä vieraslajia parannat kukan kasvumahdollisuuksia.")
-            tod += 1
+            tod += 1 # jos et kitke ollenkaan, esineestä tulee vaikeampi löytää
+            print(f"Nyt vieraslaji peittää {(1 - 1/tod) *100} % niitystä.")
     input("")
     return tod
 
     
-def etsi_alue4(inv):
+def etsi_alue4(inv): # alue4 aka pellot. toisesta suunnasta löytyy marjoja, ja toisessa suunnassa voit muuntaa marjat mehuksi
     print("Tiesi haarautuu kahteen suuntaan:")
     print("punaiseksi maalattuun maatilarakennukseen ja vesivoimalla toimivaan myllyyn.")
 
@@ -100,15 +105,20 @@ def etsi_alue4(inv):
         print("Tutkit maatilaa ja sen rakennuksia.")
         print("Löydät maatilan takaa pensaan, josta löytyy punaisen kuultavia marjoja.")
         visuaalit.loyto_visuaali()
-        print("Löysit marjat.")
+        print("Löysit korillisen marjoja.")
+        input()
         inv.append("Marjat")
     elif x == "mylly":
         print("Myllyssä on vesivoimalla toimiva mehustin.")
         if inv.count("Marjat") >= 2:
             print("Asetat marjat mehustimeen ja käännät sen vipua.")
             visuaalit.loyto_visuaali()
-            print("Löysit mehua!")
+            print("Löysit pullon mehua!")
+            input()
             inv.remove("Marjat")
             inv.remove("Marjat")
             inv.append("Mehu")
+        else:
+            visuaalit.hukassa_visuaali()
+            print("Et oikein tiedä, mitä pitäisi tehdä...")
 

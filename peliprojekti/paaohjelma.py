@@ -74,7 +74,8 @@ alue3 = Alue("niitty","peliprojekti/kuvaukset/kuvaus3.txt",["Kukka"])
 alue4 = Alue("pellot","peliprojekti/kuvaukset/kuvaus4.txt",["Mehu"])
 
 try: # hakee pelaajan tallennetut tiedot, jos peliä pelaataan ekaa kertaa kysyy tiedot
-    with open("tallennus.json","r") as tiedosto:
+
+    with open("peliprojekti/tallennus.json","r") as tiedosto:
         data = json.load(tiedosto)
         pelaaja1.nimi = data[0]
         pelaaja1.ika = data[1]
@@ -110,6 +111,7 @@ with open("peliprojekti/kuvaukset/intro.txt", "r", encoding="utf-8") as tiedosto
 toiminto = ""
 
 while len(Alue.alueet) > 0: #while loop loppuu, kun pelin voittaa
+
     #ennen päävalikkoon pääsyä pelaajan tulee valita alue, jonka hän aikoo pelastaa
     while pelaaja1.sijainti != "metsä" and pelaaja1.sijainti != "vuoret" and pelaaja1.sijainti != "niitty" and pelaaja1.sijainti != "pellot":
         print("Mitä aluetta haluat auttaa?\n")
@@ -125,7 +127,24 @@ while len(Alue.alueet) > 0: #while loop loppuu, kun pelin voittaa
 print("Voitit pelin!")
 visuaalit.loppu_visuaali()
 
-# tähän extraa jos ehdin
+# viime hetkellä lisätty salainen loppu, jonka saa, kun pelin lopuksi inventaarioisssa on jokainen
+# pelissä saatava esine. Tässä käytetty koodi on muunneltu versio etene-metodista.
+salainen_lista =["Sieni","Keppi","Vesi","Kukka","Marjat","Mehu"]
+poistot = 0
+for i in salainen_lista: 
+    for j in pelaaja1.inventaario:
+        if i == j:
+            pelaaja1.inventaario.remove(i)
+            poistot += 1
+            break
+
+if len(salainen_lista) == poistot: 
+    print("Pääsit salaiseen loppuun, koska inventaarioosi oli jäänyt")
+    print("vähintään 1 kpl jokaista pelissä löytyvää esinettä!")
+    visuaalit.salainen_visuaali()
+
+
+# salaisen lopun koodi loppuu tähän!        
 
 if os.path.exists("peliprojekti/tallennus.json"): # poistaa tallennuksen, kun peli on ohi.
     os.remove("peliprojekti/tallennus.json")
