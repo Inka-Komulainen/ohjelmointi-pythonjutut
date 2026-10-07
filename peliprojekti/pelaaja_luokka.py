@@ -3,15 +3,16 @@
 import etsi_funktiot
 
 class Pelaaja:
-    def __init__(self,nimi,ika,sijainti="x"):
+    def __init__(self,nimi,ika,sijainti="x",tod=6):
         self.nimi = nimi
         self.ika = ika
         self.sijainti = sijainti
+        self.tod = tod
         self.inventaario = []
 
     def kutsu_profiili(self): # kertoo pelaajan nimen ja iän, antaa muuttaa ne.
-        print(f"Nimesi on {self.nimi} ja ikäsi on {self.ika}.")
-        print(f"Sijantisi on {self.sijainti}.")
+        print(f"Nimesi on {self.nimi} ja ikäsi on {self.ika}.\n")
+        print(f"Sijantisi on {self.sijainti}.\n")
 
         x = input("Haluatko muuttaa nimesi tai ikäsi? (k/e): ")
         while x != "k" and x != "e":
@@ -47,6 +48,6 @@ class Pelaaja:
         elif self.sijainti == "vuoret":
             etsi_funktiot.etsi_alue2(self.inventaario)
         elif self.sijainti == "niitty":
-            etsi_funktiot.etsi_alue3(self.inventaario)
+           self.tod = etsi_funktiot.etsi_alue3(self.inventaario, self.tod)
         elif self.sijainti == "pellot":
             etsi_funktiot.etsi_alue4(self.inventaario)

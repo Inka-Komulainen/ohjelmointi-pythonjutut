@@ -1,0 +1,7 @@
+Valtakunnan vuoret muodostuvat jylhistä huipuista ja jyrkistä rinteistä. Pieni kylä on asettunut
+näiden rinteiden väliin pienelle tasaiselle kielekkeelle.
+
+Kylän kaivo on sortunut, ja sen uudelleenrakennus on aloitettu, mutta rakennuksen ajaksi
+asukkailla ei ole tarpeeksi vettä! Sinun tulee löytää asukkaille viisi tynnyrillistä vettä, jotta he
+selviävät rakennusajan. Vuoristopolut ovat harhaanjohtavia ja puikkelehtivia, mutta vuorilta löytyy
+myös puhdasta vettä pulppuavia lähteitä.

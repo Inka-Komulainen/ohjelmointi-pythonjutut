@@ -25,9 +25,9 @@ def etsi_alue1(inv):
 
 def etsi_alue2(inv):
     print("Saavut vuoristoiselle alueelle, joka on tunnettu lähteistään.")
-    x = input("Lähdetkö etsimään kylästä ylä- vai alarinteeseen? (ylös, alas):").lower()
+    x = input("Lähdetkö etsimään kylästä ylä- vai alarinteeseen? (ylös, alas): ").lower()
     while x != "ylös" and x != "alas":
-        input("Lähdetkö etsimään kylästä ylä- vai alarinteeseen? (ylös, alas):").lower()
+        input("Lähdetkö etsimään kylästä ylä- vai alarinteeseen? (ylös, alas): ").lower()
 
     if x == "ylös":
         arpa = random.randint(1,3)
@@ -60,11 +60,9 @@ def etsi_alue2(inv):
             print("Pitää jatkaa etsimistä...")
 
 
-def etsi_alue3(inv):
+def etsi_alue3(inv, tod):
     print("Saavut avoimelle niitylle täynnä kukkia. Näet ihmisiä tekevän jotain kukkien seassa.")
-    # voit etsiä tai kitkeä
-    # jokainen kitkeminen nostaa etsimisen onnistumista
-    tod = 6
+    # voit etsiä tai kitkeä, jokainen kitkeminen nostaa etsimisen onnistumista
 
     x = input("Mitä aiot tehdä? (kitke, tutki): ").lower()
     while x != "kitke" and x != "tutki":
@@ -72,29 +70,31 @@ def etsi_alue3(inv):
 
     if x == "kitke":
         print("Autat tutkijoita vieraslajin kitkemisessä.")
-        tod -= 1
+        if tod > 1:
+            tod -= 1
+            print(f"Nyt vieraslaji peittää {1 - 1/tod} % niitystä.")
     elif x == "tutki":
         print("Etsit niityltä kukkaa.")
         x = random.randint(1,tod)
         if x == 1:
             visuaalit.loyto_visuaali()
-            print("Löysit kukan!")
+            input("Löysit kukan!")
             inv.append("Kukka")
         else:
             print("Et löytänyt kukkaa. Koska et auttanut tutkijoita, vieraslaji leviää niityllä.")
-            print("Kitkemällä vieraslajia parannat kukan kasvumahdollisuuksia.")
+            input("Kitkemällä vieraslajia parannat kukan kasvumahdollisuuksia.")
             tod += 1
     input("")
+    return tod
 
     
 def etsi_alue4(inv):
-    print("Saavut pelloille, jossa vihertävät istutukset jatkuvat silmänkantamattomiin, ja silloin")
-    print("tällöin peltojen seassa on ihmisten asutuksia ja aittoja. Tiesi haarautuu kahteen suuntaan:")
+    print("Tiesi haarautuu kahteen suuntaan:")
     print("punaiseksi maalattuun maatilarakennukseen ja vesivoimalla toimivaan myllyyn.")
 
-    x = input("Mihin menet? (maatila, mylly)").lower
-    if x != "maatila" and x != "mylly":
-        x = input("Mihin menet? (maatila, mylly)").lower
+    x = input("Mihin menet? (maatila, mylly): ").lower()
+    while x != "maatila" and x != "mylly":
+        x = input("Mihin menet? (maatila, mylly): ").lower()
 
     if x == "maatila":
         print("Tutkit maatilaa ja sen rakennuksia.")
@@ -104,10 +104,11 @@ def etsi_alue4(inv):
         inv.append("Marjat")
     elif x == "mylly":
         print("Myllyssä on vesivoimalla toimiva mehustin.")
-        if inv.count("Marjat") >= 1:
+        if inv.count("Marjat") >= 2:
             print("Asetat marjat mehustimeen ja käännät sen vipua.")
             visuaalit.loyto_visuaali()
             print("Löysit mehua!")
+            inv.remove("Marjat")
             inv.remove("Marjat")
             inv.append("Mehu")
 

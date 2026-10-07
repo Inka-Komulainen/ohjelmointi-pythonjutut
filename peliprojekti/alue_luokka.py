@@ -1,18 +1,14 @@
 #etene funktio - pääsee seuraavalle alueelle tämän kautta, jos täyttää alueen lähtöehdon.
-from pelaaja_luokka import Pelaaja
-
 
 class Alue: 
     alueet = []
-    tehdyt_alueet = 0
     def __init__(self, nimi, kuvaus, lahtoehto): # +esineet?
         self.nimi = nimi
         self.kuvaus = kuvaus
         self.lahtoehto = lahtoehto
         Alue.alueet.append(self.nimi)
 
-    def kutsu_etene(self,inv,pel): 
-        print(self.kuvaus)
+    def kutsu_etene(self,inv,sij): 
 
         poistot = 0
         for i in self.lahtoehto: #tarkistaa, onko pyydetyt esineet listassa ja poistaa ne
@@ -23,10 +19,9 @@ class Alue:
                     break
 
         if len(self.lahtoehto) == poistot: # tarkistaa, että
-            self.tehdyt_alueet += 1
-            self.alueet.remove(pel)
+            self.alueet.remove(sij)
             print("Annat pyydetyt esineet, ja voit jatkaa seuraavalle alueelle.")
-            return True
+            return True, ""
         else:
-            print("Ei ollut tarpeeksi tarvikkeita. Pakenet ennen kuin rölli ottaa sinut suihinsa.")
+            print("Ei ollut tarpeeksi tarvikkeita.")
             return False

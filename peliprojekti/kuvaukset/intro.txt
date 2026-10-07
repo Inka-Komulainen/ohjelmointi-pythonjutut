@@ -1,0 +1,11 @@
+Olet valtakunnan ritari! Valtakunnassasi on neljä aluetta (metsä, vuoret, niitty, pellot), jotka kaikki ovat
+joutuneet pulaan. Jokaisella alueella sinun tulee auttaa alueen asukkaita löytämällä joku esine tai esineitä,
+ja antamalla ne asukkaille. Voit valita missä järjestyksessä pelaat alueet, mutta sinun tulee pelata
+valitsemasi alue loppuun ennen, kun voit edetä seuraavalle alueelle. Voitat, kun kaikki alueet ovat turvassa.
+
+Päävalikon etsi-toiminnolla voit löytää esineitä eri tavoin riippuen alueesta, jossa olet. Kun olet löytänyt
+tarpeeksi esineitä etene seuraavalle alueelle etene-toiminnolla. Jos sinulla ei ole tarpeeksi esineitä,
+kyseiseltä alueelta keräämäsi esineet poistetaan, ja joudut aloittamaan alusta. Voit kutsua tietosi ja 
+pelitilanteen profiili-toiminnolla, inventaariosi löydöt-toiminnolla esineiden määrän seuraamiseen, 
+ja lopettaa pelin lopeta-toiminnolla. Pelitilanteesi tallentuu lopettaessasi pelin, niin voit jatkaa siitä
+mihin jäit. Pelin tallenne poistetaan, kun voitat pelin.

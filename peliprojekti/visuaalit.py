@@ -69,15 +69,19 @@ def loyto_visuaali():
 """)
     print(e_visuaali)
 
-
-#         -- \___/ --   ⎱         .--.--.      .--.--.
-#   ccccc   /  |  \     .-.              .--.--.     cccc
-#cccc  ccccccc       __|  |__      cccccc    cccccccc  ccccccc
-#  ccccc    ccccc   (_ /' '\_) | ccc    ccccccc  ccccccc
-#                   //|___ / \(()                         
-# ///__            () /_._|  --M--           ___////__
-#      \///_.--------//--||---||-----._///__/           
-#           \  ///  /_|  |_\  || /// /                   
+def loppu_visuaali():
+    
+    l_visuaali =(r"""
+         -- \___/ --   ⎱         .--.--.      .--.--.
+   ccccc   /  |  \     .-.              .--.--.     cccc
+cccc  ccccccc       __|  |__      cccccc    cccccccc  ccccccc
+  ccccc    ccccc   (_ /' '\_) | ccc    ccccccc  ccccccc
+                   //|___ / \(()                         
+ ///__            () /_._|  --M--           ___////__
+      \///_.--------//--||---||-----._///__/          /// 
+           \  ///  /_|  |_\  || /// /                   ////
+""")
+    print(l_visuaali)
 
 #r""
 #r"       ⎱  "
