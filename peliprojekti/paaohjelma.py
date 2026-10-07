@@ -44,7 +44,7 @@ def kutsu_paavalikko():
     
         elif toiminto == "lopeta": # lopettaa pelin ja tallentaa tilanteen
             data = [pelaaja1.nimi,pelaaja1.ika,pelaaja1.sijainti,pelaaja1.inventaario,Alue.alueet]
-            with open("tallennus.json", "w") as tiedosto:
+            with open("peliprojekti/tallennus.json", "w") as tiedosto:
                 json.dump(data, tiedosto)
             sys.exit()
 
@@ -100,6 +100,13 @@ else:
     print("Et taida olla vielä tarpeeksi vanha.")
     sys.exit()
 
+# tulostaa pelin esittelyn ja ohjeet
+with open("peliprojekti/kuvaukset/intro.txt", "r", encoding="utf-8") as tiedosto:
+    data = tiedosto.read()
+    print(data)
+    input()
+
+
 toiminto = ""
 
 while len(Alue.alueet) > 0: #while loop loppuu, kun pelin voittaa
@@ -120,6 +127,6 @@ visuaalit.loppu_visuaali()
 
 # tähän extraa jos ehdin
 
-if os.path.exists("tallennus.json"): # poistaa tallennuksen, kun peli on ohi.
-    os.remove("tallennus.json")
+if os.path.exists("peliprojekti/tallennus.json"): # poistaa tallennuksen, kun peli on ohi.
+    os.remove("peliprojekti/tallennus.json")
 

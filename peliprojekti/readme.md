@@ -44,3 +44,9 @@ Lähes kaikilla päävalikon toiminnoilla on oma funktio. "Profiili" toiminto ei
 1. Olen jakanut koodin eri moduuleihin. Luokat pelaaja ja alue ovat molemmat omissa moduuleissaan. Etsi-toiminto, joka toimii eri tavalla riippuen millä pelin alueella pelaaja sijaitsee, on omassa moduulissaan sen verrattaisen suuruuden vuoksi. Pelissä on pieniä 'ASCII-taide' teoksia tuomaan vähän visuaalisuutta peliin, jotka sijaitsevat omassa tiedostossaan. En kokenut paketin luomsita tarpeelliseksi peliäni varten.
 
 2. Pelissäni on kaksi luokkaa: Pelaaja ja Alue. Pelaajalla on ominaisuudet: nimi, ikä, sijainti ja inventaariona toimiva lista. Alueella on ominaisuudet: nimi, kuvaus, lähtöehto (millä perusteella alueesta pääsee pois). Alueella on myös kaksi luokkamuuttujaa: toinen on lista alue-objektien nimistä joita pelaaja ei ole suorittanut, ja toinen on luku joka kertoo montako aluetta pelaaja on suorittanut. Pelissäni ei ole Esine luokkaa, koska pelin esineillä ei ole ominaisuuksia tai erityisiä toimintoja.
+
+## projektitehtävä 5
+
+1. Pelin aloittaessa tulostetaan intro teksti, jossa on myös ohjeet pelaamiseen. Näiden lisäksi jokaiselle alueeelle on oma kuvaus, joka tulostuu sen jälkeen kun alue valitaan. Kaikki tekstitiedostot ovat tallennettu kuvaukset kansioon.
+
+2. Peli luo tallennuksen, jos sen lopettaa ennen kun pelaaja on voittanut pelin. Seuraavan kerran pelin käynnistäessä jatketaan siitä mihin jäätiin. Pelin tallennus poistetaan, kun peli voitetaan.
