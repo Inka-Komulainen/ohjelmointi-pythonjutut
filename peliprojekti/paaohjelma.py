@@ -1,7 +1,5 @@
 # ensimmäinen peliprojektini
 
-# kestävän kehityksen teema: pelaaja etenee pelissä uusille alueille, joissa hänen täytyy
-# auttaa ihmisiä. Jokaisen alueen ongelma edustaa jotakin kestävän kehityksen teemaa.
 import sys
 import os
 import json
@@ -108,8 +106,6 @@ with open("peliprojekti/kuvaukset/intro.txt", "r", encoding="utf-8") as tiedosto
     input()
 
 
-toiminto = ""
-
 while len(Alue.alueet) > 0: #while loop loppuu, kun pelin voittaa
 
     #ennen päävalikkoon pääsyä pelaajan tulee valita alue, jonka hän aikoo pelastaa
@@ -127,7 +123,7 @@ while len(Alue.alueet) > 0: #while loop loppuu, kun pelin voittaa
 print("Voitit pelin!")
 visuaalit.loppu_visuaali()
 
-# viime hetkellä lisätty salainen loppu, jonka saa, kun pelin lopuksi inventaarioisssa on jokainen
+# viime hetkellä lisätty salainen loppu, jonka saa, kun pelin lopuksi inventaarioissa on jokainen
 # pelissä saatava esine. Tässä käytetty koodi on muunneltu versio etene-metodista.
 salainen_lista =["Sieni","Keppi","Vesi","Kukka","Marjat","Mehu"]
 poistot = 0

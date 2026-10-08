@@ -1,4 +1,3 @@
-#
 
 import etsi_funktiot
 
@@ -43,7 +42,7 @@ class Pelaaja:
         tehdyt.clear()
 
 
-    def kutsu_etsi(self):
+    def kutsu_etsi(self): # jokaiselle alueelle on oma etsi-funktio
         if self.sijainti == "metsä":
             etsi_funktiot.etsi_alue1(self.inventaario)
         elif self.sijainti == "vuoret":

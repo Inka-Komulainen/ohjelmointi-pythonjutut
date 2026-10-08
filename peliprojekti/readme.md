@@ -49,6 +49,6 @@ Lähes kaikilla päävalikon toiminnoilla on oma funktio. "Profiili" toiminto ei
 
 ## projektitehtävä 5
 
-1. Pelin aloittaessa tulostetaan intro teksti, jossa on myös ohjeet pelaamiseen. Näiden lisäksi jokaiselle alueeelle on oma kuvaus, joka tulostuu sen jälkeen kun alue valitaan. Kaikki tekstitiedostot ovat tallennettu kuvaukset kansioon.
+1. Pelin aloittaessa tulostetaan introteksti, jossa on myös ohjeet pelaamiseen. Näiden lisäksi jokaiselle alueelle on oma kuvaus, joka tulostuu sen jälkeen kun alue valitaan. Kaikki tekstitiedostot ovat tallennettu kuvaukset kansioon.
 
 2. Peli luo tallennuksen, jos sen lopettaa ennen kun pelaaja on voittanut pelin. Seuraavan kerran pelin käynnistäessä jatketaan siitä mihin jäätiin. Pelin tallennus poistetaan, kun peli voitetaan.
