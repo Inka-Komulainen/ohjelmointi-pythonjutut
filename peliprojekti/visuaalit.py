@@ -83,6 +83,17 @@ cccc  ccccccc       __|  |__      cccccc    cccccccc  ccccccc
 """)
     print(l_visuaali)
 
+
+def salainen_visuaali():
+   s_visuaali = (r"""
+     ______
+  __|------|__
+ |__|  +1  |__|     Pääsit salaiseen loppuun.
+     \    /     Saat tämän hienon kuvan pokaalista.
+      |::|
+     /____\
+""")
+   print(s_visuaali)
 #r""
 #r"       ⎱  "
 #r"       .-.  "

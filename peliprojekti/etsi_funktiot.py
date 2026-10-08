@@ -109,7 +109,7 @@ def etsi_alue4(inv): # alue4 aka pellot. toisesta suunnasta löytyy marjoja, ja 
         input()
         inv.append("Marjat")
     elif x == "mylly":
-        print("Myllyssä on vesivoimalla toimiva mehustin.")
+        print("Myllyssä on vesivoimalla toimiva mehustin.\n")
         if inv.count("Marjat") >= 2:
             print("Asetat marjat mehustimeen ja käännät sen vipua.")
             visuaalit.loyto_visuaali()
@@ -120,5 +120,5 @@ def etsi_alue4(inv): # alue4 aka pellot. toisesta suunnasta löytyy marjoja, ja 
             inv.append("Mehu")
         else:
             visuaalit.hukassa_visuaali()
-            print("Et oikein tiedä, mitä pitäisi tehdä...")
+            input("Et oikein tiedä, mitä pitäisi tehdä...")
 

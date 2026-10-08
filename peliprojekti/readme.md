@@ -15,6 +15,8 @@ Päävalikon etsi-toiminnolla voit löytää esineitä eri tavoin riippuen aluee
 
 Kun olet löytänyt tarpeeksi esineitä voit edetä seuraavalle alueelle etene-toiminnolla. Voit kutsua tietosi profiili-toiminnolla ja inventaariosi löydöt-toiminnolla, ja lopettaa pelin lopeta-toiminnolla. Pelitilanteesi tallentuu lopettaessasi pelin. Pelin tallenne poistetaan, kun voitat pelin.
 
+Pelissäni on visuaaleja, joista suurin osa on ritarihahmosta. Nämä ritarihahmot ovat minun muunnelmiani Joan G. Starkin ascii-taide ritarista. Alkuperäinen teos löytyy visuaalit.py tiedostosta ja asciiart.eu -sivun galleriasta.
+
 ## Kestävän kehityksen periaatteet pelissäni
 
 Jokainen pelin alue edustaa jotakin kestävän kehityksen tavoitetta. Metsä edustaa "ei nälkää" tavoitetta, koska alueen asukkaat ovat uhassa nälkiintyä ja metsän vallannut rölli tarvitsee ruokaa asukkaiden vapauttamiseksi. Vuoret edustavat "puhdas vesi" tavoitetta, koska vuorten asukkaat ovat vaarassa jäädä ilman vettä. Niitty edustaa "maanpäällinen elämä" tavoitteita, koska niityllä vieraslaji on uhka alueen monimuotoisuudelle ja estää uhanalaisen kasvin kasvamista. Pellot alue edustaa "terveyttä ja hyvinvointia" tavoitetta, koska autat alueen sairaita asukkaita löytämällä parannuskeinon.

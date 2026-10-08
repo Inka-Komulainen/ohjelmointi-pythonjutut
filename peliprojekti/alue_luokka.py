@@ -21,6 +21,7 @@ class Alue:
 
         if len(self.lahtoehto) == poistot: # tarkistaa, että poistettu määrä esineitä on sama kuin pyydettyjen esineiden määrä
             self.alueet.remove(sij)
+            sij = ""
             print("Annat pyydetyt esineet, ja voit jatkaa seuraavalle alueelle.")
             return True, sij
         else:
