@@ -44,4 +44,4 @@ Moduulin 11 tehtävät tehty.
 
 ## Peliprojekti
 
-Peliprojekti teht 3 saatu valmiiksi.
+Peliprojekti on valmis.
